@@ -18,6 +18,9 @@ export default function Row({ guess, currentGuess }) {
                 {letters.map((letter, i) => (
                     <div key={i} className="filled">{letter}</div>
                 ))}
+                {[...Array(5 - letters.length)].map((_, i) => (
+                    <div key={i}></div>
+                ))}
             </div>
         )
     }
